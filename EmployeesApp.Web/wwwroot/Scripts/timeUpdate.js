@@ -1,7 +1,5 @@
 ﻿function updateTimeBox() {
-    const d = new Date();
-    let time = d.toLocaleTimeString();
-    document.getElementById("timeNow").textContent = time;
+    document.getElementById("timeNow").textContent = new Date().toLocaleTimeString();
 }
-updateTimeBox();
 setInterval(updateTimeBox, 1000);
+updateTimeBox();

@@ -4,16 +4,19 @@
     ViewBag.Title = "Create Employee";    
 }
 
-<form asp-controller="Employees" asp-action="Create" style="width: 300px;">
-    <label asp-for="Name"></label>
-    <input asp-for="Name"/>
-    <span asp-validation-for="Name"></span>
-
-    <label asp-for="Email"></label>
-    <input asp-for="Email" />
-    <span asp-validation-for="Email"></span>
-    <br />
-    <input type="submit" value="Save" />
+<form asp-controller="Employees" asp-action="Create" style="width:300px;" class="form-inline">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" aria-describedby="nameErrorInline" />
+        <small id="nameErrorInline" class="text-muted"><span asp-validation-for="Name"></span></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" for="emailInput"></label>
+        <input asp-for="Email" id="emailInput" class="form-control" />
+        <small id="nameErrorInline" class="text-muted"><span asp-validation-for="Email"></span></small>
+        <br />
+        <input type="submit" value="Save" />
+    </div>
 </form>
 <div asp-validation-summary="All"></div>
 

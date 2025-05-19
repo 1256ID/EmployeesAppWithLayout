@@ -9,6 +9,7 @@ namespace EmployeesApp.Web
             var app = builder.Build();
             app.MapControllers();
             app.Run();
+            // test
         }
     }
 }
